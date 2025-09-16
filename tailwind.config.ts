@@ -9,20 +9,15 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      animation: {
-        'fade-in-down': 'fade-in-down 0.5s ease-out'
+      colors: {
+        'primary': '#050816',
+        'secondary': '#aaa6c3',
+        'tertiary': '#151030',
+        'accent': '#915eff',
       },
-      keyframes: {
-        'fade-in-down': {
-          '0%': {
-            opacity: '0',
-            transform: 'translateY(-10px)'
-          },
-          '100%': {
-            opacity: '1',
-            transform: 'translateY(0)'
-          },
-        }
+      boxShadow: {
+        'card': '0px 35px 120px -15px #211e35',
+        'glow': '0 0 20px rgba(145, 94, 255, 0.4)',
       }
     },
   },

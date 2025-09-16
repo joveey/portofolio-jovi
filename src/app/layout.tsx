@@ -1,11 +1,15 @@
 // src/app/layout.tsx
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import ScrollToTopButton from "@/components/ScrollToTopButton";
 
-const inter = Inter({ subsets: ["latin"] });
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ['300', '400', '500', '600', '700']
+});
 
 export const metadata: Metadata = {
   title: "Portofolio | Muhammad Jovi Syawal Difa",
@@ -19,10 +23,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="id">
-      <body className={`${inter.className} bg-gray-900 text-white`}>
+      <body className={`${poppins.className}`}>
         <Navbar />
-        <main className="pt-20 px-4 md:px-16">{children}</main>
+        <main>{children}</main>
         <Footer />
+        <ScrollToTopButton />
       </body>
     </html>
   );
