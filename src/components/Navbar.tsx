@@ -44,11 +44,12 @@ const Navbar = () => {
             </Link>
           </div>
           <div className="hidden md:block">
-            {/* Navigasi Desktop dengan "Pil" Background */}
             <div className="ml-10 flex items-center space-x-2 bg-primary/50 border border-gray-800 rounded-full p-1">
               {navLinks.map((link) => (
                 <Link key={link.name} href={`/${link.href}`}
-                  className={`relative px-4 py-2 rounded-full text-sm font-medium transition-colors ${activeSection === link.href.substring(1) ? 'text-white' : 'text-secondary hover:text-white'}`}>
+                  className={`relative px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+                    activeSection === link.href.substring(1) ? 'text-white' : 'text-secondary hover:text-white' // <-- PERUBAHAN DI SINI
+                  }`}>
                   
                   {activeSection === link.href.substring(1) && (
                     <motion.div 
