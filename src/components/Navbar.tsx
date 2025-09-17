@@ -1,6 +1,5 @@
 // src/components/Navbar.tsx
 'use client';
-import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
@@ -35,7 +34,7 @@ const Navbar = () => {
     handleScroll(); // Call once to set initial state
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [navLinks]);
 
   const scrollToSection = (href: string) => {
     const element = document.getElementById(href.substring(1));

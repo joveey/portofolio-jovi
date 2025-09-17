@@ -47,7 +47,18 @@ const projects = [
   }
 ];
 
-const ProjectCard = ({ title, description, tech, link, liveLink, featured, image, status }: any) => {
+interface ProjectCardProps {
+  title: string;
+  description: string;
+  tech: string[];
+  link: string;
+  liveLink: string | null;
+  featured: boolean;
+  image: string;
+  status: string;
+}
+
+const ProjectCard = ({ title, description, tech, link, liveLink, featured, image, status }: ProjectCardProps) => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
@@ -91,13 +102,13 @@ const ProjectCard = ({ title, description, tech, link, liveLink, featured, image
         </p>
         
         <div className="flex flex-wrap gap-2 mb-6">
-          {tech.map((t: string, index) => (
+          {tech.map((t: string) => (
             <motion.span 
               key={t}
               initial={{ opacity: 0, scale: 0.8 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
+              transition={{ delay: 0.1 }}
               className="bg-accent/10 border border-accent/30 text-accent px-2 sm:px-3 py-1 rounded-full text-xs font-medium flex-shrink-0"
             >
               {t}
@@ -169,14 +180,14 @@ const ProjectsSection = () => {
 
         {/* Featured Projects - Stack on mobile, grid on larger screens */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 mb-8">
-          {projects.filter(project => project.featured).map((project, index) => (
+          {projects.filter(project => project.featured).map((project) => (
             <ProjectCard key={project.title} {...project} />
           ))}
         </div>
 
         {/* Regular Projects */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
-          {projects.filter(project => !project.featured).map((project, index) => (
+          {projects.filter(project => !project.featured).map((project) => (
             <ProjectCard key={project.title} {...project} />
           ))}
         </div>
