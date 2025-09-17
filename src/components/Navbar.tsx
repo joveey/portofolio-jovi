@@ -1,6 +1,6 @@
 // src/components/Navbar.tsx
 'use client';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { motion } from 'framer-motion';
 
 const Navbar = () => {
@@ -8,12 +8,12 @@ const Navbar = () => {
   const [activeSection, setActiveSection] = useState('home');
   const [hasScrolled, setHasScrolled] = useState(false);
 
-  const navLinks = [
+  const navLinks = useMemo(() => [
     { name: 'Home', href: '#home' },
     { name: 'About', href: '#about' },
     { name: 'Projects', href: '#projects' },
     { name: 'Contact', href: '#contact' },
-  ];
+  ], []);
 
   useEffect(() => {
     const handleScroll = () => {
