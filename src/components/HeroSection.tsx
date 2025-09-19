@@ -25,12 +25,12 @@ const HeroSection = () => {
                         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-6">
                             Hai, Saya{' '}
                             <span className="bg-gradient-to-r from-accent via-purple-400 to-blue-400 bg-clip-text text-transparent">
-                                Jovi
+                                Muhammad Jovi Syawal Difa
                             </span>
                         </h1>
                         
                         <div className="text-lg sm:text-xl md:text-2xl text-secondary mb-6 sm:mb-8 h-12 sm:h-16">
-                            <span>Full Stack Developer</span>
+                            <span>Full Stack Developser</span>
                         </div>
                         
                         <p className="text-base sm:text-lg text-secondary max-w-2xl mb-8 sm:mb-12 leading-relaxed px-4">
@@ -93,24 +93,19 @@ const HeroSection = () => {
                     <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-6 px-2">
                         Hai, Saya{' '}
                         <span className="bg-gradient-to-r from-accent via-purple-400 to-blue-400 bg-clip-text text-transparent">
-                            Jovi
+                            Muhammad Jovi Syawal Difa
                         </span>
                     </h1>
                     
                     <div className="text-lg sm:text-xl md:text-2xl text-secondary mb-6 sm:mb-8 h-12 sm:h-16 px-4 flex items-center justify-center">
                         <TypeAnimation
                             sequence={[
-                                'Full Stack Developer',
                                 2000,
-                                'Web Developer',
-                                2000,
-                                'React & Next.js Expert',
+                                'Junior Web Developer | Next.js, Vue.js & Laravel',
                                 2000,
                                 'Laravel Enthusiast',
                                 2000,
-                                'UI/UX Focused',
-                                2000,
-                                'Problem Solver',
+                                'Software Developer',
                                 2000,
                             ]}
                             wrapper="span"
@@ -160,7 +155,7 @@ const HeroSection = () => {
                         className="grid grid-cols-3 gap-6 sm:gap-8 max-w-md mx-auto"
                     >
                         <div className="text-center">
-                            <div className="text-2xl sm:text-3xl font-bold text-white mb-1">10+</div>
+                            <div className="text-2xl sm:text-3xl font-bold text-white mb-1">4+</div>
                             <div className="text-xs sm:text-sm text-secondary">Proyek</div>
                         </div>
                         <div className="text-center">

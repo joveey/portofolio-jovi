@@ -3,14 +3,13 @@
 import { motion } from 'framer-motion';
 
 const skills = [
-  { name: 'Next.js', level: 90, color: 'from-blue-500 to-blue-600' },
-  { name: 'React.js', level: 88, color: 'from-cyan-500 to-cyan-600' },
-  { name: 'TypeScript', level: 85, color: 'from-blue-600 to-blue-700' },
-  { name: 'Laravel', level: 82, color: 'from-red-500 to-red-600' },
-  { name: 'PHP', level: 80, color: 'from-purple-500 to-purple-600' },
-  { name: 'MySQL', level: 78, color: 'from-orange-500 to-orange-600' },
-  { name: 'Tailwind CSS', level: 92, color: 'from-teal-500 to-teal-600' },
-  { name: 'Git', level: 86, color: 'from-gray-500 to-gray-600' }
+  { name: 'Next.js', level: 75, color: 'from-blue-500 to-blue-600' },
+  { name: 'Vue.js', level: 80, color: 'from-emerald-500 to-slate-700' },
+  { name: 'PostgreSQL', level: 75, color: 'from-blue-600 to-blue-700' },
+  { name: 'Laravel', level: 85, color: 'from-red-500 to-red-600' },
+  { name: 'MySQL', level: 80, color: 'from-orange-500 to-orange-600' },
+  { name: 'Tailwind CSS', level: 80, color: 'from-teal-500 to-teal-600' },
+  { name: 'Git', level: 85, color: 'from-gray-500 to-gray-600' }
 ];
 
 const AboutSection = () => {

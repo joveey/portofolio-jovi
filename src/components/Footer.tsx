@@ -48,8 +48,7 @@ const Footer = () => {
               transition={{ duration: 0.6 }}
               className="text-center md:text-left"
             >
-              <h3 className="text-2xl font-bold bg-gradient-to-r from-accent to-purple-400 bg-clip-text text-transparent mb-2">
-                Jovi.
+              <h3 className="text-2xl font-bold bg-gradient-to-r from-accent to-purple-400 bg-clip-text text-transparent mb-2"> 
               </h3>
               <p className="text-secondary text-sm max-w-sm">
                 Menciptakan solusi digital yang elegan dan fungsional untuk masa depan yang lebih baik.
@@ -121,14 +120,13 @@ const Footer = () => {
             </p>
             
             <div className="flex items-center gap-2 text-secondary text-sm">
-              <span>Dibuat dengan</span>
+              <span></span>
               <motion.div
                 animate={{ scale: [1, 1.2, 1] }}
                 transition={{ duration: 1, repeat: Infinity }}
-              >
-                <FaHeart className="text-red-500 w-4 h-4" />
+              > 
               </motion.div>
-              <span>menggunakan Next.js</span>
+              <span></span>
             </div>
           </div>
         </motion.div>
