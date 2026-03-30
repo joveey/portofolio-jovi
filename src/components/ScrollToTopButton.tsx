@@ -1,20 +1,20 @@
-// src/components/ScrollToTopButton.tsx
 'use client';
 
-import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { useEffect, useState } from 'react';
+import { AnimatePresence, motion } from 'framer-motion';
 import { FaArrowUp } from 'react-icons/fa';
 
 const ScrollToTopButton = () => {
   const [isVisible, setIsVisible] = useState(false);
 
-  const toggleVisibility = () => {
-    if (window.pageYOffset > 300) {
-      setIsVisible(true);
-    } else {
-      setIsVisible(false);
-    }
-  };
+  useEffect(() => {
+    const toggleVisibility = () => {
+      setIsVisible(window.pageYOffset > 300);
+    };
+
+    window.addEventListener('scroll', toggleVisibility);
+    return () => window.removeEventListener('scroll', toggleVisibility);
+  }, []);
 
   const scrollToTop = () => {
     window.scrollTo({
@@ -22,13 +22,6 @@ const ScrollToTopButton = () => {
       behavior: 'smooth',
     });
   };
-
-  useEffect(() => {
-    window.addEventListener('scroll', toggleVisibility);
-    return () => {
-      window.removeEventListener('scroll', toggleVisibility);
-    };
-  }, []);
 
   return (
     <AnimatePresence>
@@ -39,7 +32,7 @@ const ScrollToTopButton = () => {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 20 }}
           transition={{ duration: 0.3 }}
-          className="fixed bottom-8 right-8 bg-cyan-500 hover:bg-cyan-600 text-white p-4 rounded-full shadow-lg z-50 focus:outline-none"
+          className="fixed bottom-6 right-6 z-50 rounded-full border border-slate-200 bg-white p-3.5 text-slate-700 shadow-[0_18px_50px_rgba(15,23,42,0.15)] transition hover:border-slate-300 hover:text-slate-950 focus:outline-none"
           aria-label="Scroll to top"
         >
           <FaArrowUp />

@@ -1,0 +1,14 @@
+
+> portofolio-jovi@0.1.0 dev
+> next dev --port 3013
+
+   ▲ Next.js 15.5.3
+   - Local:        http://localhost:3013
+   - Network:      http://192.168.1.37:3013
+   - Environments: .env.local
+
+ ✓ Starting...
+ ✓ Ready in 2.1s
+ ○ Compiling / ...
+ ✓ Compiled / in 1804ms (1471 modules)
+ GET / 200 in 2479ms

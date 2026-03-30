@@ -1,19 +1,19 @@
-// src/app/layout.tsx
-import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
-import "./globals.css";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import ScrollToTopButton from "@/components/ScrollToTopButton";
+import type { Metadata } from 'next';
+import { Manrope } from 'next/font/google';
+import './globals.css';
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
+import ScrollToTopButton from '@/components/ScrollToTopButton';
 
-const poppins = Poppins({
-  subsets: ["latin"],
-  weight: ['300', '400', '500', '600', '700']
+const manrope = Manrope({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700', '800'],
 });
 
 export const metadata: Metadata = {
-  title: "Portofolio | Muhammad Jovi Syawal Difa",
-  description: "Portofolio pribadi Muhammad Jovi Syawal Difa menggunakan Next.js",
+  title: 'Muhammad Jovi Syawal Difa | Junior Web Developer',
+  description:
+    'Professional portfolio of Muhammad Jovi Syawal Difa, a junior web developer focused on modern web applications with Next.js, React.js, Laravel, and database systems.',
 };
 
 export default function RootLayout({
@@ -22,8 +22,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="id">
-      <body className={`${poppins.className}`}>
+    <html lang="en">
+      <body className={manrope.className}>
         <Navbar />
         <main>{children}</main>
         <Footer />

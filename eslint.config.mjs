@@ -10,20 +10,23 @@ const compat = new FlatCompat({
 });
 
 const eslintConfig = [
+  {
+    ignores: [
+      "node_modules/**",
+      ".next/**",
+      "out/**",
+      "build/**",
+      "coverage/**",
+      "next-env.d.ts",
+    ],
+  },
   ...compat.extends("next/core-web-vitals"),
   {
     rules: {
       "@typescript-eslint/no-unused-vars": "off",
-      "@typescript-eslint/no-explicit-any": "off", 
+      "@typescript-eslint/no-explicit-any": "off",
       "react-hooks/exhaustive-deps": "off",
     },
-    ignores: [
-      "node_modules/**",
-      ".next/**",
-      "out/**", 
-      "build/**",
-      "next-env.d.ts",
-    ],
   },
 ];
 

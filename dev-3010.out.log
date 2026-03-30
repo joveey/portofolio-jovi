@@ -1,0 +1,15 @@
+
+> portofolio-jovi@0.1.0 dev
+> next dev --turbopack --port 3010
+
+   ▲ Next.js 15.5.3 (Turbopack)
+   - Local:        http://localhost:3010
+   - Network:      http://192.168.1.37:3010
+   - Environments: .env.local
+
+ ✓ Starting...
+Creating turbopack project { dir: 'C:\\Project\\portofolio-jovi', testMode: true }
+ ✓ Ready in 1570ms
+ ○ Compiling / ...
+ ✓ Compiled / in 4.2s
+ GET / 200 in 5023ms
