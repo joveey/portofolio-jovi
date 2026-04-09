@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
+import { FiDownload } from 'react-icons/fi';
 
 const navLinks = [
   { name: 'Home', href: '#home' },
@@ -11,6 +12,8 @@ const navLinks = [
   { name: 'Skills', href: '#skills' },
   { name: 'Contact', href: '#contact' },
 ];
+
+const portfolioDownloadPath = '/Muhammad-Jovi-Portfolio.pdf';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -77,7 +80,7 @@ const Navbar = () => {
             </button>
           </motion.div>
 
-          <div className="hidden lg:block">
+          <div className="hidden lg:flex lg:items-center lg:gap-3">
             <div className="flex items-center gap-1 rounded-full border border-slate-200 bg-white/80 p-1 shadow-[0_12px_40px_rgba(15,23,42,0.06)]">
               {navLinks.map((link) => (
                 <motion.button
@@ -102,9 +105,30 @@ const Navbar = () => {
                 </motion.button>
               ))}
             </div>
+
+            <motion.a
+              href={portfolioDownloadPath}
+              download
+              className="inline-flex items-center gap-2 rounded-full bg-slate-950 px-5 py-3 text-sm font-semibold text-white shadow-[0_18px_45px_rgba(15,23,42,0.18)] transition hover:bg-sky-700"
+              whileHover={{ scale: 1.03 }}
+              whileTap={{ scale: 0.97 }}
+            >
+              <FiDownload className="text-base" />
+              Download PDF
+            </motion.a>
           </div>
 
-          <div className="lg:hidden">
+          <div className="flex items-center gap-2 lg:hidden">
+            <motion.a
+              href={portfolioDownloadPath}
+              download
+              className="inline-flex items-center gap-2 rounded-2xl border border-sky-200 bg-white px-3 py-2 text-sm font-semibold text-slate-900 shadow-[0_10px_30px_rgba(15,23,42,0.08)] transition hover:border-sky-300 hover:text-sky-700"
+              whileTap={{ scale: 0.95 }}
+              aria-label="Download portfolio PDF"
+            >
+              <FiDownload className="text-base" />
+              <span className="hidden sm:inline">PDF</span>
+            </motion.a>
             <motion.button
               onClick={() => setIsOpen(!isOpen)}
               className="inline-flex items-center justify-center rounded-2xl border border-slate-200 bg-white p-2 text-slate-500 transition hover:text-slate-950"
@@ -150,6 +174,19 @@ const Navbar = () => {
               {link.name}
             </motion.button>
           ))}
+
+          <motion.a
+            href={portfolioDownloadPath}
+            download
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: isOpen ? 1 : 0, x: isOpen ? 0 : -20 }}
+            transition={{ delay: navLinks.length * 0.08, duration: 0.2 }}
+            className="mt-3 inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-slate-950 px-4 py-3 text-base font-semibold text-white shadow-[0_16px_40px_rgba(15,23,42,0.16)] transition hover:bg-sky-700"
+            onClick={() => setIsOpen(false)}
+          >
+            <FiDownload className="text-lg" />
+            Download Portfolio PDF
+          </motion.a>
         </div>
       </motion.div>
     </motion.nav>

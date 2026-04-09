@@ -3,8 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build --turbopack",
+    "clean": "node -e \"require('fs').rmSync('.next', { recursive: true, force: true })\"",
+    "generate:portfolio-pdf": "node scripts/generate-portfolio-pdf.cjs",
+    "dev": "npm run generate:portfolio-pdf && npm run clean && next dev --turbopack",
+    "build": "npm run generate:portfolio-pdf && npm run clean && next build --turbopack",
     "start": "next start",
     "lint": "eslint"
   },
@@ -12,6 +14,7 @@
     "@emailjs/browser": "^4.4.1",
     "framer-motion": "^12.23.12",
     "next": "15.5.3",
+    "pdf-lib": "^1.17.1",
     "react": "19.1.0",
     "react-dom": "19.1.0",
     "react-icons": "^5.5.0",
